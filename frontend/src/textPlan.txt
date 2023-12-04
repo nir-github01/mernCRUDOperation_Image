@@ -1,0 +1,20 @@
+I. Uploads
+ 
+ FrontEnd Side
+   1. create input fileds
+   2. create upload buttons
+   3. connect with backend and post 
+ 
+ Backend Side 
+    1. Create Post method
+    2. Integrate middleware
+    3. Integrate with database
+
+
+II. List File with Name
+   
+
+III. Update files
+
+
+IV. Delete files
