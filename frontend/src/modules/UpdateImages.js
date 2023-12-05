@@ -14,7 +14,7 @@ const UpdateImages = ({updateFileId}) => {
    }
    
    useEffect(()=> {
-    axios.get(`http://localhost:8000/updates/${updateFileId}`)
+    axios.get(`https://imagecrudoperationss.onrender.com/updates/${updateFileId}`)
     .then((res)=>{
       setFileName(res.data.fileName)
       setFiles(res.data.files)

@@ -1,7 +1,10 @@
 import React, {  useState } from "react";
 // import axios from "axios";
 
+
+
 const UploadImages = () => {
+
  const [files, setFiles] = useState();
  const [fileName, setFileName] = useState([]);
  const [addMore, setAddMore] = useState([localStorage.getItem('rowArray')]);
@@ -45,7 +48,7 @@ const UploadImages = () => {
       //   console.log(error)
       //  })
 
-      fetch("http://localhost:8000/img/upload", {
+      fetch("https://imagecrudoperationss.onrender.com/img/upload", {
          method:"POST",
          body:formData,
          "Content-Type":"application/json"

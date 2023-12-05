@@ -7,6 +7,7 @@ import multer from "multer";
 import path from "path";
 import mongoDb from "./db/Database.js";
 import ImgUploadModel from "./models/FileModel.js";
+import MongodbConnection from "./db/MongoDbDataBase.js";
 
 
 const server = express();
@@ -18,6 +19,7 @@ server.use('/public', express.static('public'))
 
 //Database
 mongoDb()
+MongodbConnection();
 //Multer 
 let fileNames = [];
 
