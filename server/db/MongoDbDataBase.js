@@ -4,8 +4,7 @@ configDotenv('env');
 
 let username = process.env.MONGODBUSERNAME;
 let password = process.env.PASSWORD;
- 
-console.log(username, password)
+
 
 // Replace the placeholder with your Atlas connection string
 let MongodbConnection =()=>{

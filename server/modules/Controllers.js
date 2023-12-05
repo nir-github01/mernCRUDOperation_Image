@@ -14,6 +14,7 @@ export default class FilesUploadsController{
     })
 
     let saveData = await imgData.save();
+    console.log('saveData >>> ', saveData)
     res.send(saveData);
   }
 

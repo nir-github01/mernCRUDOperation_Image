@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const UpdateImages = ({updateFileId}) => {
    const [files, setFiles] = useState();
    const [fileName, setFileName] = useState();
-   const [fileData, setFileData] = useState([]);
+  //  const [fileData, setFileData] = useState([]);
    
    let handleFName =(event) => {
       setFileName(event.target.value);
@@ -18,7 +18,7 @@ const UpdateImages = ({updateFileId}) => {
     .then((res)=>{
       setFileName(res.data.fileName)
       setFiles(res.data.files)
-      setFileData(res.data);
+      // setFileData(res.data);
     }).catch((error)=> {
       console.log("error >>> ",  error)
     })
