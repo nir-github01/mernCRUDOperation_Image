@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { BASEURL } from './BaseUrl';
 
 const UpdateImages = ({updateFileId}) => {
    const [files, setFiles] = useState();
@@ -14,7 +15,7 @@ const UpdateImages = ({updateFileId}) => {
    }
    
    useEffect(()=> {
-    axios.get(`https://imagecrudoperationss.onrender.com/updates/${updateFileId}`)
+    axios.get(`${BASEURL}/updates/${updateFileId}`)
     .then((res)=>{
       setFileName(res.data.fileName)
       setFiles(res.data.files)
@@ -38,7 +39,7 @@ const UpdateImages = ({updateFileId}) => {
         //   console.log(error)
         //  })
 
-        fetch(`http://localhost:8000/update/${updateFileId}`, {
+        fetch(`${BASEURL}/update/${updateFileId}`, {
           method:"PUT",
           body:formData,
           "Content-Type":"application/json"

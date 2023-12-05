@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import UpdateImages from './UpdateImages';
+import { BASEURL } from './BaseUrl.js';
 
 // let LIVEHOSTING_URL = 'https://imagecrudoperationss.onrender.com/'
 
@@ -11,7 +12,7 @@ const ImagesList = () => {
   const [remove, setRemove] = useState();
    
   useEffect(() => {
-    axios.get(`https://imagecrudoperationss.onrender.com/getImage`)
+    axios.get(`${BASEURL}/getImage`)
     .then((res)=> {
       if([res.data.image].length >1){
         setImgData(res.data.image)
@@ -36,7 +37,7 @@ const ImagesList = () => {
 
   useEffect(()=> {
 
-    fetch(`https://imagecrudoperationss.onrender.com/remove/${remove}`, {
+    fetch(`${BASEURL}/remove/${remove}`, {
       method:"DELETE",
     }).then((res)=> {
        res.json()
@@ -57,12 +58,12 @@ const ImagesList = () => {
        { ([ val.image].length > 0) ?  val.image.map((imgName, keyVal)=> {
         return (
         
-          <img key={keyVal} className="tableImage" src={`https://imagecrudoperationss.onrender.com/public/${imgName}`} alt='not found'/>
+          <img key={keyVal} className="tableImage" src={`${BASEURL}/public/${imgName}`} alt='not found'/>
        
         )
        }) 
         :
-          <img className="tableImage" src={`https://imagecrudoperationss.onrender.com/public/${val.image}`} alt='not found'/>
+          <img className="tableImage" src={`${BASEURL}/public/${val.image}`} alt='not found'/>
         }
         </td>
         <td>

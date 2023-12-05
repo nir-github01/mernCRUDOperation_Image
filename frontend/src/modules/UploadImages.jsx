@@ -1,6 +1,6 @@
 import React, {  useState } from "react";
 // import axios from "axios";
-
+import { BASEURL } from "./BaseUrl";
 
 
 const UploadImages = () => {
@@ -48,7 +48,7 @@ const UploadImages = () => {
       //   console.log(error)
       //  })
 
-      fetch("https://imagecrudoperationss.onrender.com/img/upload", {
+      fetch("${BASEURL}/img/upload", {
          method:"POST",
          body:formData,
          "Content-Type":"application/json"

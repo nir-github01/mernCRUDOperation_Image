@@ -1,0 +1,1 @@
+export  let BASEURL = "https://imagecrudoperationss.onrender.com";
